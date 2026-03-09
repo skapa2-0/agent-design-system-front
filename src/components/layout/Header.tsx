@@ -1,7 +1,5 @@
 'use client';
 
-import { UserButton } from '@clerk/nextjs';
-
 interface HeaderProps {
   title: string;
   breadcrumbs?: { label: string; href?: string }[];
@@ -29,13 +27,7 @@ export function Header({ title, breadcrumbs = [] }: HeaderProps) {
         )}
         {breadcrumbs.length === 0 && <h1 className="text-lg font-semibold text-white">{title}</h1>}
       </div>
-      <UserButton
-        appearance={{
-          elements: {
-            avatarBox: 'w-8 h-8',
-          },
-        }}
-      />
+      <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-bold">K</div>
     </header>
   );
 }
